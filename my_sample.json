@@ -5,22 +5,27 @@
       {"node": 2, "name": "PAL Sales"},
       {"node": 3, "name": "NA Sales"},
       {"node": 4, "name": "Total Sales"},
+
       {"node": 5, "name": "Education-WiiU"},
       {"node": 6, "name": "Fighting-Wii"},
       {"node": 7, "name": "Role-Playing-Wii"},
       {"node": 8, "name": "Party-PS4"}
+
     ],
     "links": [
       {"source": 1, "target": 4, "value": 1},
-      {"source": 2, "target": 4, "value": 2},
-      {"source": 3, "target": 4, "value": 2},
+      {"source": 2, "target": 4, "value": 1},
+      {"source": 3, "target": 4, "value": 1},
       {"source": 0, "target": 4, "value": 1},
 
       {"source": 6, "target": 3, "value": 1},
       {"source": 7, "target": 3, "value": 1},
+
       {"source": 6, "target": 2, "value": 1},
       {"source": 7, "target": 2, "value": 1},
+
       {"source": 7, "target": 1, "value": 1},
+
       {"source": 6, "target": 0, "value": 1},
       {"source": 7, "target": 0, "value": 1}
     ]

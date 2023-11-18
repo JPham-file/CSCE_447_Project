@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {"node": 0, "name": "Education"},
+    {"node": 1, "name": "Fighting"},
+    {"node": 2, "name": "Role-Playing"},
+    {"node": 3, "name": "Party"},
+    {"node": 4, "name": "Action-Adventure"},
+    {"node": 5, "name": "MMO"},
+    {"node": 6, "name": "Strategy"},
+    {"node": 7, "name": "Puzzle"},
+    {"node": 8, "name": "Misc"},
+    {"node": 9, "name": "Action"},
+    {"node": 10, "name": "Visual Novel"},
+    {"node": 11, "name": "Simulation"},
+    {"node": 12, "name": "Racing"},
+    {"node": 13, "name": "Platform"},
+    {"node": 14, "name": "Sport"},
+    {"node": 15, "name": "Shooter"},
+    {"node": 16, "name": "Adventure"},
+    {"node": 17, "name": "Sandbox"},
+    {"node": 18, "name": "Board Game"},
+
+    {"node": 19, "name": "NA Sales"},
+    {"node": 20, "name": "PAL Sales"},
+    {"node": 21, "name": "Japan Sales"},
+    {"node": 22, "name": "Other Sales"},
+
+    {"node": 23, "name": "Total Sales"}
+  ],
+  "links": [
+
+    {"source": 19, "target": 23, "value": 4},
+    {"source": 20, "target": 23, "value": 4},
+    {"source": 21, "target": 23, "value": 4},
+    {"source": 22, "target": 23, "value": 4},
+    
+    {"source": 1, "target": 19, "value": 1},
+    {"source": 1, "target": 20, "value": 1},
+    {"source": 1, "target": 22, "value": 1},
+
+    {"source": 2, "target": 19, "value": 1},
+    {"source": 2, "target": 20, "value": 1},
+    {"source": 2, "target": 21, "value": 1},
+    {"source": 2, "target": 22, "value": 1},
+
+    {"source": 3, "target": 19, "value": 1},
+    {"source": 3, "target": 20, "value": 1},
+    {"source": 3, "target": 21, "value": 1},
+    {"source": 3, "target": 22, "value": 1},
+
+    {"source": 4, "target": 19, "value": 1},
+    {"source": 4, "target": 20, "value": 1},
+    {"source": 4, "target": 21, "value": 1},
+    {"source": 4, "target": 22, "value": 1}
+  ]
+}

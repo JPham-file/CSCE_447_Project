@@ -1,0 +1,137 @@
+{
+    "nodes": [
+      {"node": 0, "name": "NA Sales"},
+      {"node": 1, "name": "PAL Sales"},
+      {"node": 2, "name": "Japan Sales"},
+      {"node": 3, "name": "Other Sales"},
+
+      {"node": 4, "name": "Total Sales"},
+
+      {"node": 5, "name": "Education"},
+      {"node": 6, "name": "Fighting"},
+      {"node": 7, "name": "Role-Playing"},
+      {"node": 8, "name": "Party"},
+      {"node": 9, "name": "Action-Adventure"},
+      {"node": 10, "name": "MMO"},
+      {"node": 11, "name": "Strategy"},
+      {"node": 12, "name": "Puzzle"},
+      {"node": 13, "name": "Misc"},
+      {"node": 14, "name": "Action"},
+      {"node": 15, "name": "Visual Novel"},
+      {"node": 16, "name": "Simulation"},
+      {"node": 17, "name": "Racing"},
+      {"node": 18, "name": "Platform"},
+      {"node": 19, "name": "Sport"},
+      {"node": 20, "name": "Shooter"},
+      {"node": 21, "name": "Muisc"},
+      {"node": 22, "name": "Adventure"},
+      {"node": 23, "name": "Sandbox"},
+      {"node": 24, "name": "Board Game"}
+
+    ],
+    "links": [
+
+      {"source": 0, "target": 4, "value": 1404.86},
+      {"source": 1, "target": 4, "value": 1024.91},
+      {"source": 2, "target": 4, "value": 151.68},
+      {"source": 3, "target": 4, "value": 367.72},
+
+      {"source": 5, "target": 0, "value": 0.51},
+      {"source": 5, "target": 1, "value": 0.18},
+      {"source": 5, "target": 3, "value": 0.07},
+
+      {"source": 6, "target": 0, "value": 81.46},
+      {"source": 6, "target": 1, "value": 40.66},
+      {"source": 6, "target": 2, "value": 9.11},
+      {"source": 6, "target": 3, "value": 19.42},
+
+      {"source": 7, "target": 0, "value": 97.86},
+      {"source": 7, "target": 1, "value": 61.39},
+      {"source": 7, "target": 2, "value": 29.97},
+      {"source": 7, "target": 3, "value": 22.03},
+
+      {"source": 8, "target": 0, "value": 20.45},
+      {"source": 8, "target": 1, "value": 8.97},
+      {"source": 8, "target": 2, "value": 2.46},
+      {"source": 8, "target": 3, "value": 2.78},
+
+      {"source": 9, "target": 0, "value": 75.44},
+      {"source": 9, "target": 1, "value": 65.15},
+      {"source": 9, "target": 2, "value": 7.05},
+      {"source": 9, "target": 3, "value": 23.46},
+
+      {"source": 10, "target": 0, "value": 4.45},
+      {"source": 10, "target": 1, "value": 2.76},
+      {"source": 10, "target": 2, "value": 2.19},
+      {"source": 10, "target": 3, "value": 1.10},
+
+      {"source": 11, "target": 0, "value": 12.77},
+      {"source": 11, "target": 1, "value": 7.37},
+      {"source": 11, "target": 2, "value": 5.46},
+      {"source": 11, "target": 3, "value": 2.39},
+
+      {"source": 12, "target": 0, "value": 12.66},
+      {"source": 12, "target": 1, "value": 6.86},
+      {"source": 12, "target": 2, "value": 2.4},
+      {"source": 12, "target": 3, "value": 2.45},
+      
+      {"source": 13, "target": 0, "value": 125.86},
+      {"source": 13, "target": 1, "value": 71.97},
+      {"source": 13, "target": 2, "value": 10.60},
+      {"source": 13, "target": 3, "value": 27.73},
+
+      {"source": 14, "target": 0, "value": 212.59},
+      {"source": 14, "target": 1, "value": 153.05},
+      {"source": 14, "target": 2, "value": 12.19},
+      {"source": 14, "target": 3, "value": 63.66},
+
+      {"source": 15, "target": 0, "value": 0.38},
+      {"source": 15, "target": 1, "value": 0.05},
+      {"source": 15, "target": 2, "value": 1.13},
+      {"source": 15, "target": 3, "value": 0.11},
+
+      {"source": 16, "target": 0, "value": 36.4},
+      {"source": 16, "target": 1, "value": 35.58},
+      {"source": 16, "target": 2, "value": 3.52},
+      {"source": 16, "target": 3, "value": 8.44},
+
+      {"source": 17, "target": 0, "value": 102.06},
+      {"source": 17, "target": 1, "value": 93.93},
+      {"source": 17, "target": 2, "value": 11.89},
+      {"source": 17, "target": 3, "value": 36.69},
+
+      {"source": 18, "target": 0, "value": 92.18},
+      {"source": 18, "target": 1, "value": 65.96},
+      {"source": 18, "target": 2, "value": 16.32},
+      {"source": 18, "target": 3, "value": 22.01},
+      
+      {"source": 19, "target": 0, "value": 206.05},
+      {"source": 19, "target": 1, "value": 196.98},
+      {"source": 19, "target": 2, "value": 18.70},
+      {"source": 19, "target": 3, "value": 60.56},
+
+      {"source": 20, "target": 0, "value": 245.18},
+      {"source": 20, "target": 1, "value": 160.51},
+      {"source": 20, "target": 2, "value": 10.70},
+      {"source": 20, "target": 3, "value": 55.72},
+
+      {"source": 21, "target": 0, "value": 27.68},
+      {"source": 21, "target": 1, "value": 15.85},
+      {"source": 21, "target": 2, "value": 2.73},
+      {"source": 21, "target": 3, "value": 5.06},
+
+      {"source": 22, "target": 0, "value": 50.18},
+      {"source": 22, "target": 1, "value": 37.13},
+      {"source": 22, "target": 2, "value": 4.72},
+      {"source": 22, "target": 3, "value": 13.88},
+      
+      {"source": 23, "target": 0, "value": 0.69},
+      {"source": 23, "target": 1, "value": 0.56},
+      {"source": 23, "target": 2, "value": 0.52},
+      {"source": 23, "target": 3, "value": 0.12},
+
+      {"source": 24, "target": 2, "value": 0.2}
+      
+    ]
+  }
+  
