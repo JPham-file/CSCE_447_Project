@@ -28,6 +28,26 @@
 .focused {
   opacity: 1;
 }
+
+.link-value {
+  font-family: 'Arial', sans-serif; /* A more readable font */
+  font-size: 14px; /* Adjust size as necessary */
+  font-weight: bold; /* Make it bold */
+  fill: #fff; /* White color for the text */
+  stroke: #000; /* Black outline for better visibility */
+  stroke-width: 0.5px; /* The width of the outline */
+  pointer-events: none; /* Prevents the text from interfering with click events */
+  user-select: none; /* Prevents the text from being selectable */
+}
+
+/* Optional: style for the text background to enhance readability */
+.text-background {
+  fill: #000; /* Black background */
+  opacity: 0.7; /* Partial transparency */
+  stroke: none; /* No outline for the background */
+  pointer-events: none; /* Prevents the background from interfering with click events */
+}
+
 </style>
 
 
@@ -67,15 +87,16 @@ d3.json("my_sample copy.json", function(error, graph) {
 
   // add in the links
   var link = svg.append("g")
-
     .selectAll(".link")
     .data(graph.links)
     .enter()
     .append("path")
     .attr("class", "link")
-    .attr("d", sankey.link() )
+    .attr("d", sankey.link())
     .style("stroke-width", function(d) { return Math.max(1, d.dy); })
-    .sort(function(a, b) { return b.dy - a.dy; });
+    .sort(function(a, b) { return b.dy - a.dy; })
+    // Add the click event listener to the links
+    .on("click", focusLink);
 
   // add in the nodes
   var node = svg.append("g")
@@ -115,7 +136,7 @@ d3.json("my_sample copy.json", function(error, graph) {
         .attr("text-anchor", "end")
         .attr("transform", null)
         
-        .text(function(d) { return d.name + " " + d.value; })  // name of node
+        .text(function(d) { return d.name + " " + d.value.toFixed(2); })  // name of node
 
         .filter(function(d) { return d.x < width / 2; })
         .attr("x", 6 + sankey.nodeWidth())
@@ -155,6 +176,51 @@ d3.json("my_sample copy.json", function(error, graph) {
           }).classed("focused", true).classed("faded", false);
         });
     }
+  }
+
+  // Function to handle the clicking of a link
+  function focusLink(d) {
+    // Check if the link is already focused
+    var isFocused = d3.select(this).classed("focused");
+    // Reset all nodes and links to unfocused state
+    d3.selectAll(".link, .node").classed("faded", true).classed("focused", false);
+    d3.selectAll(".link-value").remove(); // Remove any existing link value text elements
+
+    if (!isFocused) {
+      // If the link is not focused, fade all elements and then highlight the clicked link and its nodes
+      d3.select(this).classed("focused", true).classed("faded", false);
+      // Select the nodes connected by the link
+      d3.selectAll(".node").filter(function(node) {
+        return node === d.source || node === d.target;
+      }).classed("focused", true).classed("faded", false);
+
+      var bbox; // Will be used to store the bounding box of the text
+      svg.append("rect")
+      .attr("class", "text-background")
+      .each(function() {
+        // Get the bounding box of the text element
+        bbox = text.node().getBBox();
+      })
+      .attr("x", bbox.x - 2) // Slightly larger than the text
+      .attr("y", bbox.y - 2)
+      .attr("width", bbox.width + 4)
+      .attr("height", bbox.height + 4);
+
+      // Create a text element to show the value of the link
+      var text = svg.append("text")
+        .attr("class", "link-value")
+        .attr("x", (d.source.x + d.target.x) / 2) // Position at the middle of the link
+        .attr("y", (d.source.y + d.target.y) / 2)
+        .attr("dy", ".35em")
+        .attr("text-anchor", "middle")
+        .text(d.value); // Set the text to the link's value
+    } else {
+      // If the link is focused, unfocus it and remove the link value text
+      d3.selectAll(".link, .node").classed("faded", false).classed("focused", false);
+    }
+
+
+
   }
 
 });
